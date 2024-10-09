@@ -156,6 +156,11 @@ class App extends Component
             case 75: this.mode = 'hard'; break;
             case 120: this.mode = 'medium'; break;
             case 200: this.mode = 'easy'; break;
+                default:
+            console.error('Unexpected snakeDelay value:', snakeDelay);
+            // Optional: Set a default mode or take some other action
+            this.mode = 'unknown'; // or handle it as needed
+            break;
         }
 
         this.snakeDelay = snakeDelay;
